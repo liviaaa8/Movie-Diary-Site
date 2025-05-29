@@ -1,0 +1,483 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181a1b;
+    color: #f3f3f3;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background: #23272a;
+    border-bottom: 2px solid #ff9800;
+    padding: 0.5rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #ff9800;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-nav .auth-link,
+.main-nav .admin-link {
+    background: #ff9800;
+    color: #23272a;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.main-nav .auth-link:hover,
+.main-nav .admin-link:hover {
+    background: #fff;
+    color: #ff9800;
+}
+
+.welcome {
+    margin-right: 1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Footer */
+.main-footer {
+    background: #23272a;
+    color: #bbb;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid #ff9800;
+    font-size: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Popular Movies Carousel */
+.popular-movies-section {
+    margin-bottom: 2.5rem;
+}
+
+.popular-movies-title {
+    font-size: 1.5rem;
+    color: #ff9800;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.movies-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-color: #ff9800 #23272a;
+    scrollbar-width: thin;
+}
+
+.movies-carousel::-webkit-scrollbar {
+    height: 8px;
+    background: #23272a;
+}
+
+.movies-carousel::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 4px;
+}
+
+.movie-card {
+    background: #23272a;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    min-width: 220px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(255,152,0,0.15);
+}
+
+.movie-card img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.movie-card .movie-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ff9800;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.movie-card .movie-genre {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.movie-card .movie-release {
+    font-size: 0.92rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.movie-card .movie-desc {
+    font-size: 0.98rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    min-height: 48px;
+}
+
+/* Auth Forms */
+.auth-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+
+.auth-form {
+    background: #23272a;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    color: #ff9800;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background: #1a1d1f;
+    color: #f3f3f3;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #23272a;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: #23272a;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+    background: #ff9800;
+    color: #23272a;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #ff9800;
+}
+
+.alert {
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.alert-error {
+    background: #ff5252;
+    color: #fff;
+}
+
+.alert-success {
+    background: #43a047;
+    color: #fff;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1rem;
+    color: #bbb;
+}
+
+/* Review Page */
+.review-section {
+    background: #23272a;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.review-section h2 {
+    color: #ff9800;
+    margin-bottom: 1.2rem;
+}
+
+.review-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.review-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.review-list {
+    margin-top: 2rem;
+}
+
+.review-item {
+    border-bottom: 1px solid #333;
+    padding: 1.2rem 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-meta {
+    font-size: 0.96rem;
+    color: #bbb;
+    margin-bottom: 0.3rem;
+}
+
+.review-rating {
+    color: #ff9800;
+    font-weight: 600;
+    margin-right: 0.7rem;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    color: #f3f3f3;
+}
+
+/* Admin Panel */
+.admin-panel {
+    background: #23272a;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    margin-bottom: 2rem;
+}
+
+.admin-panel h2 {
+    color: #ff9800;
+    margin-bottom: 1.2rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.7rem 1rem;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #1a1d1f;
+    color: #ff9800;
+    font-weight: 600;
+}
+
+.admin-table tr:nth-child(even) {
+    background: #23272a;
+}
+
+.admin-table tr:nth-child(odd) {
+    background: #1a1d1f;
+}
+
+.admin-actions a {
+    margin-right: 0.7rem;
+    color: #ff9800;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.admin-actions a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .movies-carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+        scrollbar-color: #ff9800 #23272a;
+        scrollbar-width: thin;
+    }
+
+    .movie-card {
+        background: #23272a;
+        border-radius: 12px;
+        min-width: 220px;
+        max-width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 0.5rem 1rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        position: relative;
+    }
+    .movie-card img {
+        width: 120px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 98%;
+    }
+    .header-content,
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-header {
+        padding: 1rem 0.5rem;
+    }
+    .auth-form {
+        padding: 1.5rem 0.7rem;
+    }
+    .review-section,
+    .admin-panel {
+        padding: 1rem 0.5rem;
+    }
+    .movies-carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+        scrollbar-color: #ff9800 #23272a;
+        scrollbar-width: thin;
+    }
+
+    .movie-card {
+        background: #23272a;
+        border-radius: 12px;
+        min-width: 220px;
+        max-width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 0.5rem 1rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        position: relative;
+    }
+    .movie-card img {
+        width: 80px;
+        height: 120px;
+    }
+
+
+}
