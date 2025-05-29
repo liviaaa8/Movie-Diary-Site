@@ -35,7 +35,8 @@ MovieDiary features a seamless integration between its Microsoft SQL Server data
 ## Database Structure
 The application uses Microsoft SQL Server Manager with the following tables:
 
-![img.png](img.png)
+[image](https://github.com/user-attachments/assets/02577c10-aa42-46bb-929b-e206cb5769c0)
+
 
 ## Core Functions
 ### Authentication Functions
